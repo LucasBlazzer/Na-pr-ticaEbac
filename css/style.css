@@ -1,0 +1,572 @@
+/* ========================================
+   CSS RESET
+======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: #0d0d0d;
+
+  color: #f5f5f5;
+
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.cabecalho {
+  background-color: #111;
+
+  border-bottom: 1px solid #292929;
+
+  padding: 20px 0;
+}
+
+.cabecalho .container {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+.logo {
+  font-size: 28px;
+}
+
+.logo span {
+  color: #7b2cbf;
+}
+
+/* ========================================
+   MENU
+======================================== */
+
+.menu ul {
+  display: flex;
+
+  gap: 30px;
+}
+
+.menu a {
+  position: relative;
+
+  padding: 5px;
+
+  transition: 0.3s;
+}
+
+/* Pseudo-elemento */
+.menu a::after {
+  content: "";
+
+  position: absolute;
+
+  width: 0;
+
+  height: 2px;
+
+  left: 0;
+
+  bottom: 0;
+
+  background-color: #7b2cbf;
+
+  transition: 0.3s;
+}
+
+/* Pseudo-classe */
+.menu a:hover {
+  color: #a855f7;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* ========================================
+   APRESENTAÇÃO
+======================================== */
+
+.apresentacao {
+  min-height: 80vh;
+
+  display: flex;
+
+  align-items: center;
+
+  background-color: #0d0d0d;
+}
+
+.apresentacao .container {
+  max-width: 800px;
+}
+
+.destaque {
+  color: #a855f7;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+.apresentacao h2 {
+  font-size: 55px;
+
+  line-height: 1.1;
+
+  margin-bottom: 10px;
+}
+
+.apresentacao h3 {
+  font-size: 28px;
+
+  color: #a5a5a5;
+
+  margin-bottom: 20px;
+}
+
+.apresentacao p {
+  max-width: 650px;
+
+  margin-bottom: 30px;
+}
+
+/* ========================================
+   BOTÃO
+======================================== */
+
+.botao {
+  display: inline-block;
+
+  border: none;
+
+  background-color: #6a0dad;
+
+  color: white;
+
+  padding: 14px 25px;
+
+  border-radius: 6px;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+/* Pseudo-classe hover */
+.botao:hover {
+  background-color: #8f35d4;
+
+  transform: translateY(-3px);
+}
+
+/* Pseudo-classe active */
+.botao:active {
+  transform: translateY(1px);
+}
+
+/* ========================================
+   SEÇÕES
+======================================== */
+
+section {
+  padding: 80px 0;
+}
+
+.titulo-secao {
+  font-size: 36px;
+
+  margin-bottom: 40px;
+
+  position: relative;
+}
+
+/* Pseudo-elemento */
+.titulo-secao::after {
+  content: "";
+
+  display: block;
+
+  width: 60px;
+
+  height: 4px;
+
+  background-color: #7b2cbf;
+
+  margin-top: 10px;
+}
+
+/* ========================================
+   SOBRE
+======================================== */
+
+.sobre {
+  background-color: #151515;
+}
+
+.sobre-conteudo {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 40px;
+}
+
+.sobre article {
+  padding: 30px;
+
+  background-color: #1e1e1e;
+
+  border-radius: 8px;
+}
+
+.sobre article h3 {
+  margin-bottom: 15px;
+}
+
+.sobre article p {
+  margin-bottom: 15px;
+
+  color: #cfcfcf;
+}
+
+/* Aside semântico */
+.sobre aside {
+  padding: 30px;
+
+  background-color: #252525;
+
+  border-left: 4px solid #7b2cbf;
+
+  border-radius: 8px;
+}
+
+.sobre aside h3 {
+  margin-bottom: 15px;
+
+  color: #a855f7;
+}
+
+/* ========================================
+   HABILIDADES
+======================================== */
+
+.lista-habilidades {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.habilidade {
+  background-color: #171717;
+
+  padding: 30px;
+
+  border: 1px solid #292929;
+
+  border-radius: 8px;
+
+  transition: 0.3s;
+}
+
+.habilidade:hover {
+  border-color: #7b2cbf;
+
+  transform: translateY(-5px);
+}
+
+.habilidade h3 {
+  color: #a855f7;
+
+  margin-bottom: 10px;
+}
+
+.habilidade p {
+  color: #bdbdbd;
+}
+
+/* ========================================
+   PROJETOS
+======================================== */
+
+.projetos {
+  background-color: #151515;
+}
+
+.lista-projetos {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+.card-projeto {
+  position: relative;
+
+  background-color: #1f1f1f;
+
+  padding: 30px;
+
+  border-radius: 10px;
+
+  border: 1px solid #292929;
+
+  transition: 0.3s;
+}
+
+.card-projeto:hover {
+  transform: translateY(-8px);
+
+  border-color: #7b2cbf;
+}
+
+.numero-projeto {
+  display: block;
+
+  color: #7b2cbf;
+
+  font-size: 35px;
+
+  font-weight: bold;
+
+  margin-bottom: 20px;
+}
+
+.card-projeto h3 {
+  margin-bottom: 15px;
+}
+
+.card-projeto p {
+  color: #bdbdbd;
+
+  margin-bottom: 20px;
+}
+
+.tecnologias {
+  font-size: 14px;
+
+  color: #a855f7 !important;
+}
+
+.card-projeto a {
+  color: #a855f7;
+
+  font-weight: bold;
+}
+
+/* Pseudo-elemento */
+.card-projeto a::after {
+  content: " →";
+}
+
+.card-projeto a:hover {
+  color: white;
+}
+
+/* ========================================
+   CONTATO
+======================================== */
+
+.contato .container {
+  max-width: 800px;
+}
+
+.contato > .container > p {
+  color: #bdbdbd;
+
+  margin-bottom: 30px;
+}
+
+/* ========================================
+   FORMULÁRIO
+======================================== */
+
+form {
+  background-color: #171717;
+
+  padding: 35px;
+
+  border-radius: 10px;
+
+  border: 1px solid #292929;
+}
+
+.campo {
+  margin-bottom: 20px;
+}
+
+.campo label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-weight: bold;
+}
+
+.campo input,
+.campo textarea {
+  width: 100%;
+
+  padding: 14px;
+
+  background-color: #252525;
+
+  color: white;
+
+  border: 1px solid #444;
+
+  border-radius: 5px;
+
+  outline: none;
+
+  font-size: 16px;
+}
+
+/* Pseudo-classe focus */
+.campo input:focus,
+.campo textarea:focus {
+  border-color: #7b2cbf;
+}
+
+/* Pseudo-elemento placeholder */
+.campo input::placeholder,
+.campo textarea::placeholder {
+  color: #888;
+}
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+footer {
+  background-color: #080808;
+
+  padding: 30px 0;
+
+  border-top: 1px solid #292929;
+}
+
+footer .container {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+}
+
+footer p {
+  color: #888;
+}
+
+.redes-sociais {
+  display: flex;
+
+  gap: 20px;
+}
+
+.redes-sociais a {
+  color: #a855f7;
+
+  transition: 0.3s;
+}
+
+.redes-sociais a:hover {
+  color: white;
+}
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 900px) {
+  .lista-habilidades,
+  .lista-projetos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sobre-conteudo {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .cabecalho .container {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 15px;
+  }
+
+  .apresentacao {
+    min-height: auto;
+
+    padding: 100px 0;
+  }
+
+  .apresentacao h2 {
+    font-size: 40px;
+  }
+
+  .apresentacao h3 {
+    font-size: 22px;
+  }
+
+  .lista-habilidades,
+  .lista-projetos {
+    grid-template-columns: 1fr;
+  }
+
+  footer .container {
+    flex-direction: column;
+
+    gap: 15px;
+
+    text-align: center;
+  }
+}
